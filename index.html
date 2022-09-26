@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./Bootstrap/bootstrap.css">
+    <title>card-generator</title>
+    <style>
+        body{
+            background: linear-gradient(135deg, #252525,#2C3E50);
+            background-attachment: fixed;
+            background-size: cover;
+            background-repeat: no-repeat;
+            /* border: 6px solid;
+            border-image-source: linear-gradient(45deg,#2e6dbe,#f6db42);
+            border-image-slice: 1;
+            color: aliceblue; */
+        }
+        *{
+            color: #e0e0e0;
+            font-family: DOSIS;
+            letter-spacing: 2px;
+        }
+        @font-face {
+            font-family: DOSIS;
+            src: url(../fonts/Dosis/static/Dosis-Regular.ttf);
+        }
+    </style>
+</head>
+<body>
+    <h1 class="text-center mb-2">RECHARGE CARD GENERATOR</h1>
+    <div class="container-fluid row mt-2 ">
+        <div class="d-flex flex-column col-lg-5 mx-3">
+            <h2>Generate Pin.</h2>
+            <label for="">Choose Network:</label>
+            <select name="" id="cardType" class="form-control">
+                <option value="mtn" class="text-dark">MTN</option>    
+                <option value="airtel" class="text-dark">AIRTEL</option>
+                <option value="9-mobile" class="text-dark">9-MOBILE</option>
+                <option value="glo" class="text-dark">GLO</option>
+            </select>
+            <label for="enterAmount">Enter Amount:</label>
+            <input class="form-control" type="number" id="cardAmount" placeholder="Enter card amount">
+            <button class="btn btn-info mt-2" id="generateBtn">Generate Pin</button>
+        </div>
+        <div class="d-flex flex-column col-lg-4 mx-3">
+            <h2>Load Card.</h2>
+            <input class="form-control mb-1" type="text" id="loadInp" placeholder="card pin">
+            <button class="btn btn-warning" id="loadBtn">LOAD</button>
+        </div>
+    </div>
+    <table  class="table table-bordered table-hover mt-5 table-striped table-responsive-md">
+        <thead>
+            <tr>
+                <th>S/N</th>
+                <th>Amount</th>
+                <th>Pin</th>
+                <th>Card Status/Action</th>
+            </tr>
+        </thead>
+        <tbody id="tBody"></tbody>
+    </table>
+    
+</body>
+<script src="./js/script.js"></script>
+</html>
